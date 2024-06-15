@@ -18,7 +18,7 @@
 <main>
 <div class="container">
 <section>
-  <p id="choice">ここに日時を表示します。</p>
+
 </section>
 </div><!-- /.container -->
 </main>
@@ -29,8 +29,14 @@
 </footer>
 <script>
   'use strict';
-  document.getElementById('choice').textContent = new Date();
-  console.log(document.getElementById('choice').textContent);
+  const hour = new Date().getHours();
+  if(hour >= 19 && hour < 21){
+    window.alert('お弁当30%OFF!');
+  }else if(hour === 9 || hour === 15){
+    window.alert('お弁当一つ買ったら一個おまけ！');
+  }else{
+    window.alert('お弁当はいかがですか？');
+  }
 </script>
 </body>
 </html>

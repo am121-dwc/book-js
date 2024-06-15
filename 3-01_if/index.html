@@ -18,7 +18,7 @@
 <main>
 <div class="container">
 <section>
-  <p id="choice">ここに日時を表示します。</p>
+
 </section>
 </div><!-- /.container -->
 </main>
@@ -29,8 +29,12 @@
 </footer>
 <script>
   'use strict';
-  document.getElementById('choice').textContent = new Date();
-  console.log(document.getElementById('choice').textContent);
+
+  if(window.confirm('ゲームスタート！準備はいい？')){
+    console.log('ゲームを開始します。');
+  }else{
+    console.log('ゲームを終了します。');
+  }
 </script>
 </body>
 </html>

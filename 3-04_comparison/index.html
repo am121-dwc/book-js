@@ -18,7 +18,7 @@
 <main>
 <div class="container">
 <section>
-  <p id="choice">ここに日時を表示します。</p>
+
 </section>
 </div><!-- /.container -->
 </main>
@@ -29,8 +29,20 @@
 </footer>
 <script>
   'use strict';
-  document.getElementById('choice').textContent = new Date();
-  console.log(document.getElementById('choice').textContent);
+
+  const number = Math.floor(Math.random() * 6);
+  const answer = parseInt(window.prompt('数当てゲーム。0~5の数値を入力してね。'));
+  let message;
+  if(answer === number){
+    message = 'あたり！';
+  }else if(answer > number){
+    message = '残念！もっと小さい。';
+  }else if(answer < number){
+    message = '残念！もっと大きい。';
+  }else{
+    message = '0~5までの数値を入力して下さい。';
+  }
+  window.alert(message);
 </script>
 </body>
 </html>
